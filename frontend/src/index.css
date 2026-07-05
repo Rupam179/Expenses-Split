@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #F5F6F3;
+  color: #1B2430;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Ledger-style dotted leader line, like an old receipt: "Rent .......... 500" */
+.leader-line {
+  flex: 1;
+  border-bottom: 1.5px dotted #B9BFB2;
+  margin: 0 0.5rem;
+  transform: translateY(-4px);
+}
+
+/* Visible keyboard focus ring everywhere, for accessibility */
+:focus-visible {
+  outline: 2px solid #1F6F5C;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
